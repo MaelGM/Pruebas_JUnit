@@ -5,7 +5,7 @@ public class EmpleadoBR {
     public static float calculaSalarioBruto(TipoEmpleado tipus, float ventasMes, float horasExtra){
         if (tipus.toString() != null || ventasMes <0 ||horasExtra <0){
             float saldo;
-            if (tipus.name().equalsIgnoreCase(TipoEmpleado.vendedor.name())) saldo = 1000;
+            if (tipus.name().equalsIgnoreCase(TipoEmpleado.venedor.name())) saldo = 1000;
             else saldo = 1500;
 
             if (ventasMes >= 1500) saldo += 200;
