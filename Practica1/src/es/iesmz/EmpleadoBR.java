@@ -19,8 +19,8 @@ public class EmpleadoBR {
     public static float calculaSalarioNeto(float salarioBruto){
         if (salarioBruto < 0) return -1;
 
-        if (salarioBruto >= 1500) return salarioBruto * (1-(18/100));
-        else if (salarioBruto >= 1000) return salarioBruto * (1-(16/100));
+        if (salarioBruto >= 1500) return (float) (salarioBruto * 0.82); // Porque no funciona (salarioBruto * (1-(18/100))
+        else if (salarioBruto >= 1000) return (float) (salarioBruto * 0.84);
         else return salarioBruto;
     }
 }
