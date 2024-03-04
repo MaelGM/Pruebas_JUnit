@@ -3,17 +3,17 @@ package es.iesmz;
 public class EmpleadoBR {
 
     public static float calculaSalarioBruto(TipoEmpleado tipus, float ventasMes, float horasExtra){
-        if (tipus.toString() != null || ventasMes <0 ||horasExtra <0){
-            float saldo;
-            if (tipus.name().equalsIgnoreCase(TipoEmpleado.venedor.name())) saldo = 1000;
-            else saldo = 1500;
-
-            if (ventasMes >= 1500) saldo += 200;
-            else if (ventasMes >= 1000) saldo += 100;
-
-            return saldo + (horasExtra*20);
+        if (tipus == null || ventasMes < 0 ||horasExtra <0){
+            return -1;
         }
-        return -1;
+        float saldo;
+        if (tipus.name().equalsIgnoreCase(TipoEmpleado.venedor.name())) saldo = 1000;
+        else saldo = 1500;
+
+        if (ventasMes >= 1500) saldo += 200;
+        else if (ventasMes >= 1000) saldo += 100;
+
+        return saldo + (horasExtra*20);
     }
 
     public static float calculaSalarioNeto(float salarioBruto){
