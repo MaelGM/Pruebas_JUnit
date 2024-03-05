@@ -61,32 +61,26 @@ public class EmpleadoBRTest {
     void testCalculaSalarioBruto5(){
         assertEquals(1600, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.encarregat, 1000, 0));
     }
-
     @Test
     void testCalculaSalarioBruto6(){
         assertEquals(1560, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.encarregat, 999.99f, 3));
     }
-
     @Test
     void testCalculaSalarioBruto7(){
         assertEquals(1500, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.encarregat, 500, 0));
     }
-
     @Test
     void testCalculaSalarioBruto8(){
         assertEquals(1660, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.encarregat, 0, 8));
     }
-
     @Test
     void testCalculaSalarioBruto9(){
         assertEquals(-1, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.venedor, -1, 8));
     }
-
     @Test
     void testCalculaSalarioBruto10(){
         assertEquals(-1, EmpleadoBR.calculaSalarioBruto(TipoEmpleado.venedor, 1500, -1));
     }
-
     @Test
     void testCalculaSalarioBruto11(){
         assertEquals(-1, EmpleadoBR.calculaSalarioBruto(null, 1500, 8));
