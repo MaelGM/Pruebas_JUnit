@@ -58,7 +58,10 @@ public class DiasLluvia {
                 if (cont4 > max) max = cont4;
             }
         }
-        return max;
+        if (max == cont1) return 1;
+        else if (max == cont2) return 2;
+        else if (max == cont3) return 3;
+        else return 4;
     }
 
     public int primerDiaLluvia(){
