@@ -28,7 +28,6 @@ public class Compte {
         try{
             numeros = new BigInteger(entitat+oficina+dc+compte+"142800");
         }catch (NumberFormatException | ArithmeticException e){
-            e.printStackTrace();
             return null;
         }
         BigInteger resto = numeros.mod(new BigInteger("97"));
